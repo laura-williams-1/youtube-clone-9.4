@@ -1,6 +1,6 @@
 
 
-function Navbar() {
+export default function Navbar() {
 
     return (
         <div className="">
@@ -9,4 +9,3 @@ function Navbar() {
     )
 }
 
-export default Navbar
