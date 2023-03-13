@@ -11,7 +11,7 @@ function Search() {
         event.preventDefault();
         let searchItem = event.target.searchbox.value
         console.log(searchItem)
-        fetch(`https://youtube.googleapis.com/youtube/v3/search?q=${searchItem.toLowerCase()}&part=snippet&maxResults=10&key=${process.env.REACT_APP_API_KEY}`)
+        fetch(`https://youtube.googleapis.com/youtube/v3/search?q=${searchItem.toLowerCase()}&part=snippet&maxResults=15&key=${process.env.REACT_APP_API_KEY}`)
         .then((res) => res.json())
         .then((response) => {
             console.log('we made it!', )
