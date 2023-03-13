@@ -3,7 +3,7 @@ export default function MemberCard({ member }) {
     <div>
       {console.log(member)}
       <div>
-        <h1>{member.fullName}</h1>
+        <h2>{member.fullName}</h2>
         <img src={member.imgUrl} />
         <h3>{member.summary}</h3>
         <b>

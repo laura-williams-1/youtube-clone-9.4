@@ -5,7 +5,7 @@ import Navbar from './components/navbar/Navbar'
 import Search from './components/search/Search'
 import Video from './components/video/Video'
 import About from './components/about/About'
-import Home from './components/Home'
+
 
 function App() {
   return (
@@ -16,7 +16,6 @@ function App() {
         <Route path='/video/:id' element={<Video />} />
         <Route path='/about' element={<About />} />
       </Routes>
-      <Home />
     </div>
   )
 }

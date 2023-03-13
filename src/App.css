@@ -37,13 +37,3 @@
   }
 }
 
-.trending {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  list-style-type: none;
-}
-
-
-.trending li {
-  margin-right: 5px;;
-}
