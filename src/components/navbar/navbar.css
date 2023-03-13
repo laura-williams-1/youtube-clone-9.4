@@ -1,0 +1,31 @@
+nav {
+  background-color: red;
+  display: flex;
+  flex-direction: row;
+  padding-left: 20px;
+}
+h1 {
+  font-size: 1.75em;
+}
+.navlink {
+  margin: 0.83em;
+  transform: translateY(30%);
+  font-size: large;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+.search-button {
+  height: 35px;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.search-bar {
+  height: 30px;
+  width: 50vw;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+}
+.inputs {
+  margin: auto;
+}
