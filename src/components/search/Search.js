@@ -24,11 +24,12 @@ function Search() {
 
         let searchedVideos = videos.map((video, index) => {
           let someVideos = video.snippet.thumbnails.medium.url;
+          console.log(video);
           return (
             <li
               key={index}
               onClick={() => {
-                navigate(`/video/:${video.id}`);
+                navigate(`/video/:${video.id.videoId}`);
               }}
             >
               <img src={someVideos} alt="video-thumbnail" />
