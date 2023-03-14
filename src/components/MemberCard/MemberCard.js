@@ -1,11 +1,14 @@
+import "./MemberCard.css";
 export default function MemberCard({ member }) {
   return (
     <div>
       {console.log(member)}
-      <div>
-        <h2>{member.fullName}</h2>
-        <img src={member.imgUrl} alt='face' />
-        <h3>{member.summary}</h3>
+      <div className="card">
+        <h1>{member.fullName}</h1>
+        <img src={member.imgUrl} alt="face" />
+
+        <p>{member.summary}</p>
+
         <b>
           <p>
             {member.fullName.split(" ")[0]}'s{" "}

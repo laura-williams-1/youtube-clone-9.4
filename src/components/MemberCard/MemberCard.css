@@ -1,0 +1,22 @@
+img {
+  border-radius: 50%;
+  height: 250px;
+}
+img:hover {
+  transform: scale(1.1);
+}
+.card {
+  background-color: rosybrown;
+  display: flex;
+  flex-direction: row;
+  /* height: 250px; */
+  /* justify-content: space-evenly; */
+  align-items: center;
+}
+
+p {
+  text-align: center;
+}
+.card:hover {
+  flex: 1 0 30%;
+}
