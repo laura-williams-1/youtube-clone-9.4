@@ -51,11 +51,7 @@ function Search() {
             <li
               key={index}
               onClick={() => {
-<<<<<<< HEAD
-                navigate(`/video/${video.id.videoId}`);
-=======
                 navigate(`/video/:${video.id.videoId}`);
->>>>>>> ebe071133093f67136617ba55420c1efda3b74d7
               }}
             >
               <img src={someVideos} alt="video-thumbnail" />
