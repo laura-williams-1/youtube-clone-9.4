@@ -4,7 +4,7 @@ export default function MemberCard({ member }) {
       {console.log(member)}
       <div>
         <h2>{member.fullName}</h2>
-        <img src={member.imgUrl} />
+        <img src={member.imgUrl} alt='face' />
         <h3>{member.summary}</h3>
         <b>
           <p>

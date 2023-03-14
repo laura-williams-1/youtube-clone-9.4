@@ -18,6 +18,7 @@ function Search() {
               let popVid = response.items
       
               let trending =   popVid.map((video, index) => {
+                console.log(video)
                   let popVidImg = video.snippet.thumbnails.medium.url
                       return <li key={index}>
                                   <img src={popVidImg} alt='trending-video-thumbnail'/>
@@ -49,7 +50,7 @@ function Search() {
             <li
               key={index}
               onClick={() => {
-                navigate(`/video/:${video.id}`);
+                navigate(`/video/${video.id.videoId}`);
               }}
             >
               <img src={someVideos} alt="video-thumbnail" />
