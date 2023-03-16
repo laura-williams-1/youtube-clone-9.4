@@ -10,7 +10,7 @@ const teamMembers = [
     fullName: "Leliah-Chantel Spruill",
     imgUrl: `https://avatars.githubusercontent.com/u/115671548?v=4`,
     summary: `Leliah is a full stack developer and a real estate agent. She is currently learning HTML, CSS, and JavaScript to enhance her skills in web development. She can be reached at her email address, which is leliah791@gmail.com.`,
-    gitHub: `https://github.com/felizj17`,
+    gitHub: `https://github.com/Leliah`,
     id: 2,
   },
   {
