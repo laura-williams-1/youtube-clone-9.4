@@ -1,20 +1,17 @@
 import "./MemberCard.css";
+import github from "/Users/laurawilliams/module-3/projects/youtube-clone-9.4/src/components/MemberCard/github-logo.png";
 export default function MemberCard({ member }) {
   return (
     <div>
       {console.log(member)}
       <div className="card">
-        <h1>{member.fullName}</h1>
-        <img src={member.imgUrl} alt="face" />
-
-        <p>{member.summary}</p>
-
-        <b>
-          <p>
-            {member.fullName.split(" ")[0]}'s{" "}
-            <a href={member.gitHub}>GitHub Profile </a>
-          </p>
-        </b>
+        <img id="headshot" src={member.imgUrl} alt="face" />
+        <br />
+        <h1 className="full-name">{member.fullName}</h1>
+        <a href={member.gitHub}>
+          <img className="github-icon" src={github} alt="github logo" />{" "}
+        </a>
+        <p className>{member.summary}</p>
       </div>
     </div>
   );

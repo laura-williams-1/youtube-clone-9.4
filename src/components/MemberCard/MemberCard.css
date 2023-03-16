@@ -1,22 +1,51 @@
-img {
-  border-radius: 50%;
-  height: 250px;
-}
-img:hover {
-  transform: scale(1.1);
-}
 .card {
-  background-color: rosybrown;
-  display: flex;
-  flex-direction: row;
-  /* height: 250px; */
-  /* justify-content: space-evenly; */
-  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  margin: 20px;
+  max-width: 350px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(255, 0, 0, 0.446);
+  transform: translateY(-10px);
+}
+
+.full-name {
+  color: #6e6c6c;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
 }
 
 p {
-  text-align: center;
+  color: #667;
+  font-size: 18px;
+  margin: 20px;
 }
-.card:hover {
-  flex: 1 0 30%;
+
+.github-icon {
+  width: 30px;
+  height: 30px;
+  padding: auto;
+}
+
+.github-icon:hover {
+  transform: translateY(-5px);
+}
+
+#headshot {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin-top: 20px;
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
