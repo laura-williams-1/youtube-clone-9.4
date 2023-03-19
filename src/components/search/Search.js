@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 
 function Search({ videos }) {
   const navigate = useNavigate()
-  const [trendingVideo, setTrendingVideo] = useState()
+  const [trendingVideo, setTrendingVideo] = useState([])
 
   useEffect(() => {
     fetch(
@@ -15,39 +15,36 @@ function Search({ videos }) {
       .then(response => {
         console.log('we made it!')
         //DATA ARR
-        setTrendingVideo(response.items)
-      })
+        let popVid = response.items
+
+        let trending = popVid.map((video, index) => {
+          console.log(video)
+          let popVidImg = video.snippet.thumbnails.medium.url
+          return (
+            <li
+              key={index}
+              onClick={() => {
+                navigate(`/video/${video.id}`)
+              }}
+            >
+              <img src={popVidImg} alt='trending-video-thumbnail' />
+              <h2>{video.snippet.title}</h2>
+            </li>
+          )
+        })
+        console.log(trending)
+        setTrendingVideo(trending)
+      }) //THEN CLOSING TAG
   }, [])
+  useEffect(() => console.log(trendingVideo), [trendingVideo])
 
   return (
     <div className='search'>
       <div className='results'>
         <ul className='video-results'>
-          {
-          videos.length>0?null:trendingVideo.map((video, index) => {
-            let popVidImg = video.snippet.thumbnails.medium.url
-            return (
-              <li key={index}>
-                <img src={popVidImg} alt='trending-video-thumbnail' />
-                <h2>{video.snippet.title}</h2>
-              </li>
-            )
-          })}
-          {videos.map((video, index) => {
-            let someVideos = video.snippet.thumbnails.medium.url
+          {videos.length > 0 ? null : trendingVideo}
 
-            return (
-              <li
-                key={index}
-                onClick={() => {
-                  navigate(`/video/:${video.id.videoId}`)
-                }}
-              >
-                <img src={someVideos} alt='video-thumbnail' />
-                <h2>{video.snippet.title}</h2>
-              </li>
-            )
-          })}
+          {videos && videos}
         </ul>
       </div>
     </div>
