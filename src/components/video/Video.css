@@ -21,9 +21,9 @@
   grid-row-start: 1;
   grid-row-end: 3;
 }
-.parent h2{
-    margin-top:0;
-    margin-bottom:20px;
+.parent h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 .search-results {
   position: absolute;
@@ -33,18 +33,23 @@
   height: 90vh;
   overflow-y: scroll;
 }
+
 .search-result {
   width: 90%;
   margin-bottom: 20px;
-  border: solid black 2px;
+  border: solid #444 1px;
   border-radius: 5px;
+  background-color: #fff9f9;
+  padding: 20px;
+  border-radius: 4px;
+  transition: transform 0.3s ease-in-out;
 }
 .search-result:hover {
   background-color: lightgrey;
   cursor: pointer;
+  box-shadow: 0 8px 16px 0 rgba(255, 0, 0, 0.446);
 }
 .video-card {
-
   display: flex;
   flex-direction: row;
 }
@@ -52,16 +57,16 @@
   width: 200px;
   height: 150px;
 }
-.details{
-    text-align: left;
-    margin-left: 15px;;
+.details {
+  text-align: left;
+  margin-left: 15px;
 }
 .details h2 {
   font-size: medium;
 }
-.details p{
-    margin:20px 0 0 0;
-    font-size: small;
+.details p {
+  margin: 20px 0 0 0;
+  font-size: small;
 }
 .video-info {
   display: flex;

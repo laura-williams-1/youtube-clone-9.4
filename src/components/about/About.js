@@ -5,7 +5,6 @@ import ProjectSummary from "./ProjectSummary/ProjectSummary";
 export default function About() {
   return (
     <div>
-      <div></div>
       <ProjectSummary />
       <div className="TeamMembers">
         {teamMembers.map((member) => {
