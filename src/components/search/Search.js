@@ -11,12 +11,13 @@ function Search({ videos }) {
     fetch(
       `https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=15&key=${process.env.REACT_APP_API_KEY}`
     )
+
       .then((res) => res.json())
       .then((response) => {
         console.log("we made it!");
         //DATA ARR
         let popVid = response.items;
-        console.log(popVid);
+        
         let trending = popVid.map((video, index) => {
           console.log(video);
           let popVidImg = video.snippet.thumbnails.medium.url;

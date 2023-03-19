@@ -1,8 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { useParams, NavLink } from "react-router-dom";
-import YouTube from "react-youtube";
-import Comments from "./Comments";
-import "./Video.css";
+
+import React, { useEffect, useState } from 'react'
+import { useParams, NavLink } from 'react-router-dom'
+import YouTube from 'react-youtube'
+import Comments from './Comments'
+
+import './Video.css'
+
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faThumbsUp } from "@fortawesome/free-regular-svg-icons";
@@ -15,9 +18,11 @@ export default function Video() {
   const [date, setDate] = useState();
 
   const [dimensions, setDimensions] = useState({
-    height: window.innerHeight,
-    width: window.innerWidth,
-  });
+
+    height: window.innerHeight*.7,
+    width: window.innerWidth*.7,
+  })
+
   useEffect(() => {
     fetch(`https://www.googleapis.com/youtube/v3/videos?id=${id}&key=${process.env.REACT_APP_API_KEY}
     &fields=items(id,snippet,statistics)&part=snippet,statistics`)
@@ -136,8 +141,10 @@ export default function Video() {
         </button>
         <hr />
       </section>
-      <section className="comments">
-        <Comments />
+
+      <section className='comments'>
+        <Comments id={id}/>
+
       </section>
       <section className="parent">
         <h2>Related Videos</h2>
