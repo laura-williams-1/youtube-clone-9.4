@@ -13,7 +13,6 @@ function Search({ videos }) {
     )
       .then(res => res.json())
       .then(response => {
-        console.log('we made it!')
         //DATA ARR
         let popVid = response.items
 
