@@ -1,1 +1,118 @@
+.video-page {
+  text-align: left;
+  width: 95%;
+  margin: 40px 60px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto;
+}
+.comments {
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+.parent {
+  text-align: center;
+  position: relative;
+  border-left: solid grey 2px;
+  padding-left: 10%;
+  padding-right: 10%;
+  height: 85vh;
+  grid-column-start: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.parent h2{
+    margin-top:0;
+    margin-bottom:20px;
+}
+.search-results {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth;
+  height: 90vh;
+  overflow-y: scroll;
+}
+.search-result {
+  width: 90%;
+  margin-bottom: 20px;
+  border: solid black 2px;
+  border-radius: 5px;
+}
+.search-result:hover {
+  background-color: lightgrey;
+  cursor: pointer;
+}
+.video-card {
 
+  display: flex;
+  flex-direction: row;
+}
+.video-card img {
+  width: 200px;
+  height: 150px;
+}
+.details{
+    text-align: left;
+    margin-left: 15px;;
+}
+.details h2 {
+  font-size: medium;
+}
+.details p{
+    margin:20px 0 0 0;
+    font-size: small;
+}
+.video-info {
+  display: flex;
+  flex-direction: row;
+  height: 120px;
+  justify-content: space-between;
+}
+.stats {
+  margin-top: 90px;
+}
+.space {
+  margin-left: 20px;
+}
+
+.btn {
+  border: none;
+  background-color: transparent;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.btn:hover {
+  cursor: pointer;
+  background-color: red;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+#user {
+  width: 320px;
+}
+#body {
+  resize: none;
+  height: 75px;
+  width: 640px;
+}
+#youtube-video {
+  width: 90%;
+  grid-column-start: 1;
+}
+h2 {
+  margin-bottom: 0;
+}
+hr {
+  margin-top: 0;
+}
+
+/*======================= Comments =======================*/
+.error {
+  margin-left: 5px;
+  color: red;
+  font-weight: 600;
+}

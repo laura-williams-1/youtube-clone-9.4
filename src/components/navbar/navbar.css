@@ -15,17 +15,23 @@ h1 {
   color: white;
   font-weight: 500;
 }
-.search-button {
+#search-btn {
   height: 35px;
   border-bottom-right-radius: 15px;
   border-top-right-radius: 15px;
 }
-.search-bar {
+#searchbox {
+    /* margin-top:2px; */
   height: 30px;
   width: 50vw;
   border-bottom-left-radius: 15px;
   border-top-left-radius: 15px;
+  font-size: larger;
 }
 .inputs {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
   margin: auto;
 }

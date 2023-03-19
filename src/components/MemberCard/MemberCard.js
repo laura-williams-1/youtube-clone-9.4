@@ -1,5 +1,5 @@
 import "./MemberCard.css";
-import github from "/Users/laurawilliams/module-3/projects/youtube-clone-9.4/src/components/MemberCard/github-logo.png";
+import github from "./github-logo.png";
 export default function MemberCard({ member }) {
   return (
     <div>
