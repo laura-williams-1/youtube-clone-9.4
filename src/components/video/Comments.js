@@ -1,25 +1,28 @@
-import React, { useState, useEffect } from 'react'
-export default function Comments() {
+import React, { useEffect, useState } from 'react'
+
+export default function Comments({ id }) {
   const regex = /^\s*$/
   const [show, setShow] = useState(false)
   const [error, setError] = useState({
     user: false,
     body: false,
   })
-  const [comments, setComments] = useState([])
+  const [comments, setComments] = useState(localStorage.getItem(`${id}`)?JSON.parse(localStorage.getItem(`${id}`)):[])
   const [comment, setComment] = useState({
     user: '',
     body: '',
   })
-  const clearError = ()=>{
-      setTimeout(() => {
-          setError({
-              user: false,
-              body: false,
-            })
-        },[3000])
-    }
-      const cancel = () => {
+
+    
+  const clearError = () => {
+    setTimeout(() => {
+      setError({
+        user: false,
+        body: false,
+      })
+    }, [3000])
+  }
+  const cancel = () => {
     setComment({
       user: '',
       body: '',
@@ -38,6 +41,7 @@ export default function Comments() {
 
     if (!regex.test(comment.user) && !regex.test(comment.body)) {
       setComments([...comments, comment])
+      localStorage.setItem(`${id}`, JSON.stringify([...comments, comment]))
     } else if (regex.test(comment.user) && regex.test(comment.body)) {
       setError({ user: true, body: true })
       clearError()
@@ -93,12 +97,13 @@ export default function Comments() {
         </form>
       )}
 
-      {comments.map((com, i) => (
-        <div key={`comment-${i}`}>
-          <h5>{com.user}</h5>
-          <p>{com.body}</p>
-        </div>
-      ))}
+      {comments &&
+        comments.map((com, i) => (
+          <div key={`comment-${i}`}>
+            <h5>{com.user}</h5>
+            <p>{com.body}</p>
+          </div>
+        ))}
     </section>
   )
 }
