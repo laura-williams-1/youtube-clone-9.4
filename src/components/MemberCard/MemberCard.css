@@ -1,0 +1,51 @@
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  margin: 20px;
+  max-width: 350px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(255, 0, 0, 0.446);
+  transform: translateY(-10px);
+}
+
+.full-name {
+  color: #6e6c6c;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+p {
+  color: #667;
+  font-size: 18px;
+  margin: 20px;
+}
+
+.github-icon {
+  width: 30px;
+  height: 30px;
+  padding: auto;
+}
+
+.github-icon:hover {
+  transform: translateY(-5px);
+}
+
+#headshot {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin-top: 20px;
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}

@@ -5,7 +5,6 @@ import ProjectSummary from "./ProjectSummary/ProjectSummary";
 export default function About() {
   return (
     <div>
-      <h1>About The Dream Team</h1>
       <div></div>
       <ProjectSummary />
       <div className="TeamMembers">
