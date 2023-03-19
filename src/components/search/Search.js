@@ -23,6 +23,7 @@ function Search({ videos }) {
           return (
             <li
               key={index}
+              className="video"
               onClick={() => {
                 navigate(`/video/${video.id}`);
               }}
